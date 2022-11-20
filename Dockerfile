@@ -1,6 +1,8 @@
 # Dockerfile
 FROM alpine
 
-ENV DUMMY_VAR ""
+COPY entrypoint.sh /opt/entrypoint.sh
 
-RUN echo ${DUMMY_VAR}
+ENV DUMMY_VAR "some-file"
+
+ENTRYPOINT [ "/opt/entrypoint.sh" ]
