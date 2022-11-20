@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cloud-sql-proxy:
+    image: mcarpi/cloud-sql-proxy:latest
+    restart: unless-stopped
+    ports:
+      - 5434:5434
